@@ -8,8 +8,11 @@ const cartScheam = new Schema({
   items: [
     {
       type: Schema.Types.ObjectId,
-      ref: "Product",
+      ref: "carts",
     },
   ],
+  purchase: {
+    type: Boolean,
+  },
 });
 export default cartScheam;

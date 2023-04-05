@@ -26,5 +26,19 @@ class ProductModel {
     const product = new this.mongo_model(productData);
     await product.save();
   }
+  async addReview(productId, productData) {
+    const product = await this.mongo_model.findById(productId);
+    if (!product) {
+      throw new Error(`Product with id:${productId} was not found`);
+    }
+    await this.mongo_model.updateOne(
+      { _id: productId },
+      {
+        reviews: productData.reviews || product.reviews,
+        rating: productData.rating || product.rating,
+        comment: productData.product || product.rating,
+      }
+    );
+  }
 }
 export default ProductModel;

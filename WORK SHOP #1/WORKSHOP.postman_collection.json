@@ -65,7 +65,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"productIds\":\"642b0219c0b98e4c4ca74817\"\r\n}",
+					"raw": "{\r\n    \"productIds\":\"642b0219c0b98e4c4ca74817\",\r\n    \"purchase\":\"false\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -88,6 +88,51 @@
 		},
 		{
 			"name": "GET ALL CART ITEMS",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "PURCHASE ITEM",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"purchase\":\"true\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cart/642c4d7ebd3057ef73a31bfe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cart",
+						"642c4d7ebd3057ef73a31bfe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ORDER HSTORY",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "ADD REVIEW",
 			"request": {
 				"method": "GET",
 				"header": []

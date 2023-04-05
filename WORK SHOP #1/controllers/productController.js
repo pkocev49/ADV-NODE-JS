@@ -38,6 +38,25 @@ class ProductController {
     await productModel.addProduct(productData);
     res.status(201).send({ message: "Product created" });
   }
+  async addReview(req, res) {
+    const productId = req.params.id;
+
+    const {
+      reviews: { rating, comment },
+    } = req.body;
+    const productData = {
+      reviews: {
+        rating: rating,
+        comment: comment,
+      },
+    };
+    try {
+      await productModel.addReview(productId, productData);
+      res.send({ message: `Added reviw to product with id:${productId}` });
+    } catch (error) {
+      res.status(404).send({ message: error.message });
+    }
+  }
 }
 
 export default ProductController;

@@ -11,7 +11,16 @@ const productSchema = new Schema({
   price: {
     type: Number,
   },
-  reviews: [],
+  reviews: [
+    {
+      rating: {
+        type: Number,
+      },
+      comment: {
+        type: String,
+      },
+    },
+  ],
 });
 
 export default productSchema;
