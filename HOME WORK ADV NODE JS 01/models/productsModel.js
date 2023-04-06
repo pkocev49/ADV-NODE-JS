@@ -30,7 +30,7 @@ class ProdctModel {
       { _id: productId },
       {
         name: productData.name || product.name,
-        desription: productData.description || product.description,
+        description: productData.description || product.description,
         price: productData.price || product.price,
       }
     );

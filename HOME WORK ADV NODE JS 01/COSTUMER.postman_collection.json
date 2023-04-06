@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "5dcaa372-02d7-4115-9e47-3296fd95dcde",
+		"name": "COSTUMER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26434265"
+	},
+	"item": [
+		{
+			"name": "GET ALL COSTUMERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/costumers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"costumers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE COSTUMER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"name\":\"Aleksandar\",\r\n  \"email\":\"aleksandar@gmail.com\",\r\n  \"phone\":\"03234234432\",\r\n  \"address\":{\r\n    \"street\":\"Drvos vtora kuka\",\r\n    \"country\":\"Makedonija\",\r\n    \"city\":\"Nema selak e\",\r\n    \"zip\":11111\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/costumers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"costumers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET COSTUMER BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/costumers/6429bd20a233867bd6edaf45",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"costumers",
+						"6429bd20a233867bd6edaf45"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE COSTUMER",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/costumers/6429badca233867bd6edaf41",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"costumers",
+						"6429badca233867bd6edaf41"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE COSTUMER",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"name\":\"Aleksassndar\",\r\n  \"email\":\"ss@gmail.com\",\r\n  \"phone\":\"0323423sss4432\",\r\n  \"address\":{\r\n    \"street\":\"Drvos vtora kuka\",\r\n    \"country\":\"Maskedonija\",\r\n    \"city\":\"Nema sselak e\",\r\n    \"zip\":11111\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/costumers/6429bd20a233867bd6edaf45",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"costumers",
+						"6429bd20a233867bd6edaf45"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
