@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "1c1d4a78-6864-4220-b8fc-e889378b2430",
+		"name": "FOOD APP HOMEWORK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26434265"
+	},
+	"item": [
+		{
+			"name": "GET ALL ORDERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ORDER BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/order/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE ORDER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"productsOrder\": [\r\n        { \"id\": \"1\", \"productName\": \"Pizza\", \"productPrice\": 12.99 }\r\n      ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE ORDER",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"productsOrder\": [\r\n            {\r\n                \"id\": \"1\",\r\n                \"productName\": \"Pi\",\r\n                \"productPrice\": 12.99\r\n            },\r\n              {\r\n                \"id\": \"2\",\r\n                \"productName\": \"Pissss\",\r\n                \"productPrice\": 12.99\r\n            }\r\n        ],\r\n        \"id\": \"57a3e41a-a934-495a-b0bc-b5ed77ce66d0\",\r\n        \"orderDate\": \"2023-04-20T16:20:38.564Z\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/order/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ORDER",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/order/2sssss",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"2sssss"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL PRODUCTS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
