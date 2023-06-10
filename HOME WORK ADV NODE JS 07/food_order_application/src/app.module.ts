@@ -10,9 +10,6 @@ import { AuthController } from './auth/auth.controller';
 import { PassportModule } from '@nestjs/passport';
 @Module({
   imports: [
-    PassportModule.register({ defaultStrategy: 'jwt' }),
-    AuthModule,
-
     UsersModule,
     OrderModule,
     ProductModule,
@@ -28,8 +25,9 @@ import { PassportModule } from '@nestjs/passport';
 
       // logging: true,
     }),
+    AuthModule,
   ],
-  controllers: [AppController, AuthController],
+  controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
